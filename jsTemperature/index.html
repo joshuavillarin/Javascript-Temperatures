@@ -1,0 +1,45 @@
+<html>
+	<head>
+        <body>
+		<script>
+		
+			
+			function findCelsius(){
+				var fahrenheit = document.getElementById("fahrenheit").value;
+				var celsius;
+				if(fahrenheit != ''){
+					celsius = (5*(fahrenheit - 32)) /9;
+					document.getElementById("output").innerHTML = celsius;
+				}else{
+					document.getElementById("output").innerHTML = "Please enter a value!";
+				}
+			}
+            
+            function findfahrenheit(){
+				var celsius = document.getElementById("celsius").value;
+				var fahrenheit;
+				if(celsius != ''){
+					fahrenheit = (celsius * 9/5)+32;
+					document.getElementById("output").innerHTML = fahrenheit;
+				}else{
+					document.getElementById("output").innerHTML = "Please enter a value!";
+				}
+			}
+		
+		</script>
+
+	
+		<h1>Enter Fahrenheit</h1>
+		<input type="text" id="fahrenheit" />
+		<button onclick="findCelsius()" >Find Celsius</button>
+ 
+		<h4>celsius: <span id="output"></span></h4>
+        
+        <h1>Enter celsius</h1>
+		<input type="text" id="celsius" />
+		<button onclick="findfahrenheit()" >Find fahrenheit</button>
+ 
+		<h4>fahrenheit: <span id="output"></span></h4>
+	</body>
+        	</head>
+</html>
